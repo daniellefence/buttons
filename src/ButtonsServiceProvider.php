@@ -2,6 +2,8 @@
 
 namespace Daniellefence\Buttons;
 
+use Daniellefence\Buttons\Components\Button;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class ButtonsServiceProvider extends ServiceProvider
@@ -16,8 +18,10 @@ class ButtonsServiceProvider extends ServiceProvider
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'buttons');
          $this->loadViewsFrom(__DIR__.'/../resources/views', 'df');
+        Blade::component('button', Button::class, 'df');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
+
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
