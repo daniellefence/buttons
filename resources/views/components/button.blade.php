@@ -123,3 +123,13 @@
         {{ $slot }}
     </button>
 @endif
+
+@once
+    @push('tailwind-detection')
+        <div class="hidden">
+            btn-primary btn-secondary btn-accent btn-info btn-success btn-warning btn-error btn-neutral
+            btn-soft btn-outline btn-ghost btn-link btn-active btn-disabled btn-wide btn-block btn-square btn-circle
+            btn-xs btn-sm btn-md btn-lg btn-xl
+        </div>
+    @endpush
+@endonce
