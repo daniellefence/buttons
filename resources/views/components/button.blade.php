@@ -30,6 +30,7 @@
     'block'    => false,
     'square'   => false,
     'circle'   => false,
+    'loading'  => false,
 ])
 
 @php
@@ -102,9 +103,11 @@
             </span>
         @endisset
 
-        <span class="mr-2" wire:loading>
-            <span class="loading loading-spinner"></span>
-        </span>
+        @if($loading)
+            <span class="mr-2">
+                <span class="loading loading-spinner"></span>
+            </span>
+        @endif
 
         {{ $slot }}
     </a>
@@ -116,9 +119,11 @@
             </span>
         @endisset
 
-        <span class="mr-2" wire:loading>
-            <span class="loading loading-spinner"></span>
-        </span>
+        @if($loading)
+            <span class="mr-2">
+                <span class="loading loading-spinner"></span>
+            </span>
+        @endif
 
         {{ $slot }}
     </button>

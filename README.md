@@ -6,7 +6,7 @@
 
 This package provides a robust `<x-df::button>` Blade component designed for use with Laravel, Tailwind CSS, and DaisyUI. It supports all DaisyUI button variants, including color states (primary, secondary, accent, etc.), sizes (xs through xl), styles (ghost, link, outline, soft, etc.), and modifiers (block, wide, square, circle, etc.).
 
-Built for full Livewire compatibility, it also includes support for icon slots and loading indicators, making it ideal for building interactive, consistent interfaces quickly.
+Built for full Livewire compatibility, it also includes support for icon slots, a `loading` prop to show spinners, and loading indicators, making it ideal for building interactive, consistent interfaces quickly.
 
 ## Installation
 
@@ -52,6 +52,11 @@ composer require daniellefence/buttons
         </svg>
     </x-slot>
     Saving...
+</x-df::button>
+
+// With loading spinner
+<x-df::button loading>
+    Loading...
 </x-df::button>
 ```
 
