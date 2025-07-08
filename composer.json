@@ -1,0 +1,53 @@
+{
+    "name": "daniellefence/buttons",
+    "version": "1.0.3.3",
+    "description": "Buttons Package used by Danielle Fence and Outdoor Living",
+    "keywords": [
+        "daniellefence",
+        "buttons"
+    ],
+    "homepage": "https://github.com/daniellefence/buttons",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shane Barron",
+            "email": "sbarron@daniellefence.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Daniellefence\\Buttons\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Daniellefence\\Buttons\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Daniellefence\\Buttons\\ButtonsServiceProvider"
+            ],
+            "aliases": {
+                "Buttons": "Daniellefence\\Buttons\\ButtonsFacade"
+            }
+        }
+    }
+}
